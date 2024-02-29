@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Squirrels</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Squirrels</h1>
+        <ul>
+            {% for s in squirrels %}
+            <li><a href={{s.id}}>{{s.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
