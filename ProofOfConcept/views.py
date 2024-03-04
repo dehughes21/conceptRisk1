@@ -2,6 +2,12 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
 from ProofOfConcept.forms import CreateForm
 from .models import Squirrel
+from .models import Sighting
+
+def all_sightings(request):
+    sighting_list = Sighting.objects.all()
+    return render(request, 'Sightings/sighting_list.html',
+                  {'sighting_list': sighting_list})
 
 def home(request):
     return render(request, 'home/home.html', {'data' : 'HOME'})

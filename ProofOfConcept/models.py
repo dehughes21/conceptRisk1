@@ -32,6 +32,6 @@ class Sighting(models.Model):
     # Many-to-many relationship for behaviors?
     
     def __str__(self):
-        return self.squirrelID + str(self.time)
+        return str(self.squirrel) + ' ' + str(self.time)
     
 
